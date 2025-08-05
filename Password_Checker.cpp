@@ -2,8 +2,9 @@
 #include <string>
 using namespace std;
 
-void passwordcheck(string password);
+void passwordcheck(string password); // Defines the function called by main
 
+// This is where the user will input the password
 int main() {
     string password;
     cout << "Please enter a password: " << endl;
@@ -14,6 +15,7 @@ int main() {
     return 0;
 }
 
+// This function takes the input from main and checks to ensure it meets the specified standards
 void passwordcheck(string password) {
     int upper = 0, lower = 0, numbers = 0, special = 0;
     int length = password.length();
@@ -56,4 +58,5 @@ void passwordcheck(string password) {
             cout << "Password must contain at least one special character!" << endl;
         }
     }
+
 }
